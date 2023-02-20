@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "UdemyUE",
+			"Path": "C:\\Users\\oldga\\Documents\\Unreal Projects\\UdemyUE\\Source\\UdemyUE.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "UdemyUEEditor",
+			"Path": "C:\\Users\\oldga\\Documents\\Unreal Projects\\UdemyUE\\Source\\UdemyUEEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
