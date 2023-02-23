@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UdemyUE.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{BC7E28D8-DCFB-441E-B539-AE2B0C57C2FA}</UniqueIdentifier>
+      <UniqueIdentifier>{96211BA1-A32B-46D9-88F4-89CEE7A5F0F9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UdemyUE.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\UdemyUEEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{22AB37DB-0B1A-44D8-942B-B916320EC60E}</UniqueIdentifier>
+      <UniqueIdentifier>{789D3FC0-5F56-4E0E-B6E3-B3B746A4E708}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +26,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UdemyUE">
-      <UniqueIdentifier>{C9B8EA07-C8D6-498C-B4B1-FCA350F806DF}</UniqueIdentifier>
+      <UniqueIdentifier>{5269538C-7686-4D8A-B028-AA363D68463C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UdemyUE\UdemyUE.Build.cs">
       <Filter>Source\UdemyUE</Filter>
@@ -42,15 +44,21 @@
       <Filter>Source\UdemyUE</Filter>
     </ClInclude>
     <Filter Include="Source\UdemyUE\Private">
-      <UniqueIdentifier>{55ECA37D-6E15-4368-BB9D-83FC79B84A77}</UniqueIdentifier>
+      <UniqueIdentifier>{37E2FE24-1B69-4DF4-A730-CA6A519CC350}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UdemyUE\Private\BaseGeometryActor.cpp">
       <Filter>Source\UdemyUE\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UdemyUE\Private\GeometryHubActor.cpp">
+      <Filter>Source\UdemyUE\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\UdemyUE\Public">
-      <UniqueIdentifier>{8399B6DC-FADD-4644-8571-53CE7EB5B7D7}</UniqueIdentifier>
+      <UniqueIdentifier>{B1B69A81-FA94-498D-BC9C-4EEEBD0AF182}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UdemyUE\Public\BaseGeometryActor.h">
+      <Filter>Source\UdemyUE\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UdemyUE\Public\GeometryHubActor.h">
       <Filter>Source\UdemyUE\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,6 +4,7 @@
 #include "BaseGeometryActor.h"
 #include "Engine/Engine.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "TimerManager.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogBaseGeometry, All, All)
 
@@ -30,6 +31,8 @@ void ABaseGeometryActor::BeginPlay()
 	//PrintTypes();
 	
 	SetColor(GeometryData.Color);
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
 }
 
 // Called every frame
@@ -47,10 +50,14 @@ void ABaseGeometryActor::HandleMovement()
 	case EMovementType::Sin:
 	{
 		FVector CurrentLocation = GetActorLocation();
-		float Time = GetWorld()->GetTimeSeconds();
-		CurrentLocation.Z = InitialLocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * Time);
+		if (GetWorld())
+		{
+			float Time = GetWorld()->GetTimeSeconds();
+			CurrentLocation.Z = InitialLocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * Time);
 
-		SetActorLocation(CurrentLocation);
+			SetActorLocation(CurrentLocation);
+		}
+		
 	}
 	break;
 	case EMovementType::Static:break;
@@ -60,10 +67,26 @@ void ABaseGeometryActor::HandleMovement()
 
 void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 {
+	if (!BaseMesh) return;
 	UMaterialInstanceDynamic* DynMaterial = BaseMesh->CreateAndSetMaterialInstanceDynamic(0);
 	if (DynMaterial)
 	{
 		DynMaterial->SetVectorParameterValue("Color", Color);
+	}
+}
+
+void ABaseGeometryActor::OnTimerFired()
+{
+	if (++TimerCount <= MaxTimerCount)
+	{
+		const FLinearColor NewColor = FLinearColor::MakeRandomColor();
+		UE_LOG(LogBaseGeometry, Display, TEXT("Timer Count: %i, Color to set up: %s"), TimerCount, *NewColor.ToString());
+		SetColor(NewColor);
+	}
+	else
+	{
+		UE_LOG(LogBaseGeometry, Warning, TEXT("Timer stopped!"));
+		GetWorldTimerManager().ClearTimer(TimerHandle);
 	}
 }
 
@@ -88,8 +111,11 @@ void ABaseGeometryActor::PrintStringTypes()
 	FString Stat = FString::Printf(TEXT(" \n == All Stat == \n%s\n%s\n%s"), *WeaponsNumStr, *HealthStr, *IsDeadStr);
 	UE_LOG(LogBaseGeometry, Warning, TEXT("%s"), *Stat);
 
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, name);
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Stat, true, FVector2D(1.5f, 1.5f));
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, name);
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Stat, true, FVector2D(1.5f, 1.5f));
+	}
 }
 
 void ABaseGeometryActor::PrintTransform()
