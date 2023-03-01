@@ -18,6 +18,13 @@ ABaseGeometryActor::ABaseGeometryActor()
 	SetRootComponent(BaseMesh);
 }
 
+void ABaseGeometryActor::PrintString()
+{
+	UE_LOG(LogBaseGeometry, Display, TEXT("Casting succesfull!, Amplitude: %f"), GeometryData.Amplitude);
+	UE_LOG(LogBaseGeometry, Display, TEXT("Frequency: %f"), GeometryData.Frequency);
+	UE_LOG(LogBaseGeometry, Display, TEXT("Color: %s"), *GeometryData.Color.ToString());
+}
+
 // Called when the game starts or when spawned
 void ABaseGeometryActor::BeginPlay()
 {
@@ -33,6 +40,12 @@ void ABaseGeometryActor::BeginPlay()
 	SetColor(GeometryData.Color);
 
 	GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
+}
+
+void ABaseGeometryActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	UE_LOG(LogBaseGeometry, Error, TEXT("Actor destroyed: %s"), *GetName());
+	Super::EndPlay(EndPlayReason);
 }
 
 // Called every frame
@@ -82,11 +95,13 @@ void ABaseGeometryActor::OnTimerFired()
 		const FLinearColor NewColor = FLinearColor::MakeRandomColor();
 		UE_LOG(LogBaseGeometry, Display, TEXT("Timer Count: %i, Color to set up: %s"), TimerCount, *NewColor.ToString());
 		SetColor(NewColor);
+		OnColorChanged.Broadcast(NewColor, GetName());
 	}
 	else
 	{
 		UE_LOG(LogBaseGeometry, Warning, TEXT("Timer stopped!"));
 		GetWorldTimerManager().ClearTimer(TimerHandle);
+		OnTimerFinished.Broadcast(this);
 	}
 }
 
