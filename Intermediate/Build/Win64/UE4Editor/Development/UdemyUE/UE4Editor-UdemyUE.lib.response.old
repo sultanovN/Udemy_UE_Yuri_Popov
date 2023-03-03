@@ -8,9 +8,13 @@
 /NODEFAULTLIB
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UdemyUEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\BaseGeometryActor.cpp.obj"
+"C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\GeometryHubActor.cpp.obj"
+"C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\SandboxPawn.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\UdemyUE.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\UdemyUEGameModeBase.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\BaseGeometryActor.gen.cpp.obj"
+"C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\GeometryHubActor.gen.cpp.obj"
+"C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\SandboxPawn.gen.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\UdemyUE.init.gen.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\UdemyUEGameModeBase.gen.cpp.obj"
 "C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\Default.rc2.res"

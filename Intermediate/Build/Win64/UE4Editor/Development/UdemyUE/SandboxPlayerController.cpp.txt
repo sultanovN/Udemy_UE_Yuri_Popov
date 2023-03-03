@@ -1,0 +1,3 @@
+C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Development\UdemyUE\Definitions.UdemyUE.h
+C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Source\UdemyUE\Public\SandboxPlayerController.h
+C:\Users\oldga\Documents\Unreal Projects\UdemyUE\Intermediate\Build\Win64\UE4Editor\Inc\UdemyUE\SandboxPlayerController.generated.h

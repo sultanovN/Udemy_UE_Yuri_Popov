@@ -14,4 +14,7 @@ class UDEMYUE_API AUdemyUEGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+
+	AUdemyUEGameModeBase();
 };

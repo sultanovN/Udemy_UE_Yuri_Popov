@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UdemyUE.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{96211BA1-A32B-46D9-88F4-89CEE7A5F0F9}</UniqueIdentifier>
+      <UniqueIdentifier>{3441C4A1-60F5-4642-ABBA-3C4834793EDE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UdemyUE.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{789D3FC0-5F56-4E0E-B6E3-B3B746A4E708}</UniqueIdentifier>
+      <UniqueIdentifier>{3317A7FA-125B-4F51-A24F-86DCA4254E9E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -25,8 +25,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\UdemyUE">
-      <UniqueIdentifier>{5269538C-7686-4D8A-B028-AA363D68463C}</UniqueIdentifier>
+      <UniqueIdentifier>{08809D03-7A86-4DC3-B024-CD4C19028E1E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UdemyUE\UdemyUE.Build.cs">
       <Filter>Source\UdemyUE</Filter>
@@ -44,7 +47,7 @@
       <Filter>Source\UdemyUE</Filter>
     </ClInclude>
     <Filter Include="Source\UdemyUE\Private">
-      <UniqueIdentifier>{37E2FE24-1B69-4DF4-A730-CA6A519CC350}</UniqueIdentifier>
+      <UniqueIdentifier>{FBC7C083-E3AD-46AD-B576-BDF02478DD9A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UdemyUE\Private\BaseGeometryActor.cpp">
       <Filter>Source\UdemyUE\Private</Filter>
@@ -52,13 +55,25 @@
     <ClCompile Include="..\..\Source\UdemyUE\Private\GeometryHubActor.cpp">
       <Filter>Source\UdemyUE\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\UdemyUE\Private\SandboxPawn.cpp">
+      <Filter>Source\UdemyUE\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UdemyUE\Private\SandboxPlayerController.cpp">
+      <Filter>Source\UdemyUE\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\UdemyUE\Public">
-      <UniqueIdentifier>{B1B69A81-FA94-498D-BC9C-4EEEBD0AF182}</UniqueIdentifier>
+      <UniqueIdentifier>{F40612DB-DF5C-4F3B-8FF8-DA5E1C2721FF}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\UdemyUE\Public\BaseGeometryActor.h">
       <Filter>Source\UdemyUE\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\UdemyUE\Public\GeometryHubActor.h">
+      <Filter>Source\UdemyUE\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UdemyUE\Public\SandboxPawn.h">
+      <Filter>Source\UdemyUE\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UdemyUE\Public\SandboxPlayerController.h">
       <Filter>Source\UdemyUE\Public</Filter>
     </ClInclude>
   </ItemGroup>

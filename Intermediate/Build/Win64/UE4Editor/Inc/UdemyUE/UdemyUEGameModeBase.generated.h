@@ -36,7 +36,7 @@ public: \
 
 #define UdemyUE_Source_UdemyUE_UdemyUEGameModeBase_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUdemyUEGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AUdemyUEGameModeBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUdemyUEGameModeBase) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUdemyUEGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUdemyUEGameModeBase); \
@@ -48,8 +48,6 @@ public:
 
 
 #define UdemyUE_Source_UdemyUE_UdemyUEGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AUdemyUEGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AUdemyUEGameModeBase(AUdemyUEGameModeBase&&); \
@@ -57,7 +55,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AUdemyUEGameModeBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUdemyUEGameModeBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUdemyUEGameModeBase)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AUdemyUEGameModeBase)
 
 
 #define UdemyUE_Source_UdemyUE_UdemyUEGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET
