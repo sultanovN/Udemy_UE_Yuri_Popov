@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeUdemyUE_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x344699F9,
+				0x6CF9E540,
 				0x020B0415,
 				METADATA_PARAMS(nullptr, 0)
 			};
